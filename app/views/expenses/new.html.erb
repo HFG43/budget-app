@@ -1,0 +1,18 @@
+<h1>Add a new Expense</h1>
+
+<%= form_with model: [@expense], local:true do |form| %>
+  <%= form.label :name, "Expense"%>
+  <%= form.text_field :name, :required => true  %> <br><br>
+  <%= form.label :amount, "Amount"%>
+  <%= form.text_field :amount, :required => true %><br><br>
+  <%= form.label "Select Categories"%>
+  <% @groups.each do |group| %>
+    <label>
+      <%= check_box_tag 'expense[group_ids][]', group.id %>
+      <%= group.name %>
+    </label><br>
+  <% end %>
+  <%= form.submit "Add new Expense", class: "button" %>
+<% end %>
+
+<%= link_to "Back", groups_path %>

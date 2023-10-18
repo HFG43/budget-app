@@ -1,0 +1,9 @@
+<h1>Groups Index</h1>
+
+<%@groups.each do |group|%>
+<%= group.name %>
+<%= image_tag group.icon %>
+<p>Total amount</p>
+<%end%>
+
+<%= link_to "Add a New Category", new_group_path %>
