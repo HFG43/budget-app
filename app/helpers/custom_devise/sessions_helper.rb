@@ -1,0 +1,2 @@
+module CustomDevise::SessionsHelper
+end

@@ -3,7 +3,10 @@
 <%@groups.each do |group|%>
 <%= group.name %>
 <%= image_tag group.icon %>
-<p>Total amount</p>
+  <% group.expenses.each do |spend|%>
+    <%@group_amount += spend.amount%>
+    <%end%>
+  <%=@group_amount%>  
 <%end%>
 
 <%= link_to "Add a New Category", new_group_path %>

@@ -6,7 +6,7 @@
   <%= form.label "Select Categories"%>
   <% @groups.each do |group| %>
     <label>
-      <%= check_box_tag "expense[group_ids][]", group.id, @expense.groups.include?(group), {required: true} %>
+      <%= check_box_tag "expense[group_ids][]", group.id, @expense.groups.include?(group)%>
       <%= group.name %>
     </label><br>
   <% end %>
