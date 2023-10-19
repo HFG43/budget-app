@@ -2,30 +2,33 @@ class ExpensesController < ApplicationController
   before_action :authenticate_user!
 
   def new
+    @path_description = "TRANSACTION"
     @author = current_user
     @groups = current_user.groups
-    @group = current_user.groups.find(params[:group_id]) 
+    @group = @groups.find(params[:group_id]) 
     @expense = Expense.new
   end
 
   def create
     @expense = current_user.expenses.new(expense_params) 
-  
-    group = Group.find(expense_params[:group_id])
-    expense.groups << group
-
+    @groups = params[:expense][:group_ids]
+      
     if @expense.save
+      @groups.each do |g|
+        linked_groups = Group.find(g)
+        ExpenseGroup.create(expense: @expense, group: linked_groups)
+      end
       flash[:success] = 'The Expense was added successfully.'
-      redirect_to expenses_path
+      puts "logrado"
     else
       flash[:error] = 'Error occurred.'
-      render 'new'
+      redirect_to new_group_path
     end
   end
 
   private
 
   def expense_params
-    params.require(:expense).permit(:name, :amount, group_ids: [])
+    params.require(:expense).permit(:name, :amount)
   end  
 end
