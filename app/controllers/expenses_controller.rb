@@ -3,18 +3,18 @@ class ExpensesController < ApplicationController
 
   def new
     @author = current_user
-    @groups = @author.groups
-    @expense = @author.expenses.new
+    @groups = current_user.groups
+    @group = current_user.groups.find(params[:group_id]) 
+    @expense = Expense.new
   end
 
   def create
-    @expense = current_user.expenses.new(expense_params)
+    @expense = current_user.expenses.new(expense_params) 
+  
+    group = Group.find(expense_params[:group_id])
+    expense.groups << group
 
     if @expense.save
-      group_ids = params[:group_ids]
-      group_ids.each do |group_id|
-        @expense.groups << Group.find(group_id)
-    end
       flash[:success] = 'The Expense was added successfully.'
       redirect_to expenses_path
     else
@@ -26,6 +26,6 @@ class ExpensesController < ApplicationController
   private
 
   def expense_params
-    params.require(:expense).permit(:name, :amount)
+    params.require(:expense).permit(:name, :amount, group_ids: [])
   end  
 end
