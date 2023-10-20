@@ -16,32 +16,40 @@ body {
 .logo {
   font-family: 'Great Vibes', cursive;
   font-weight: 400;
-  font-size: 120px;
-  color: #fff;
+  font-size: 70px;
+  color: #383737;
 }
 
 .sign_section {
-  background-color: #3778c2;
   padding: 0 12%;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 
 }
 
 .sign_section a {
-  color: rgb(252, 251, 250);
+  color: #8f8d8d;
   text-decoration: none;
-  font-size: 1.5rem;
-  padding: 6px;
-  border: 1px solid rgb(252, 251, 250);
-  border-radius: 8px;
+  font-size: 1.7rem;
+  padding: 12px 0;
+  text-align: center;
 }
+
+.sign_section a:hover {
+  color: #fff;
+  background-color: #3778c2;
+  border-radius: 6px;
+}
+
 
 .logo_container {
   text-align: center;
-  background-color: #3778c2;
-  padding-bottom: 100vh;
-  padding-top: 150px;
+  background-color: rgb(252, 251, 250);
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .navbar {

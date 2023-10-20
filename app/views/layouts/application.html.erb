@@ -10,7 +10,9 @@
     <%= javascript_importmap_tags %>
   </head>
    <body>
+     <% unless controller_name == "pages" %>
        <%= render "layouts/navbar" %>
+     <%end%>
      <%= yield %>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
