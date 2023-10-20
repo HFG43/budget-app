@@ -1,0 +1,25 @@
+<%@groups.each do |group|%>
+  <%=link_to group_path(group) do%>
+  <div class="category_container"> 
+    <div class="icon_container">
+      <%= image_tag group.icon, class: 'icon' %>
+    </div>
+    <div class="category_data_align">
+    <div class="category_data_container">
+    <p class="reg_text_col"><%= group.name %></p>
+      <% group.expenses.each do |spend|%>
+        <%@group_amount += spend.amount%>
+      <%end%>
+    <p class="reg_text_col_bold"><%=@group_amount%></p>  
+    </div>
+    <div class="category_data_date reg_text_col">
+      <%=group.created_at.strftime("%d %b %Y")%>
+    </div>
+  </div>
+  </div>
+<%end%>
+<%end%>
+
+<div class="bottom_button_container">
+  <%= link_to "ADD NEW CATEGORY", new_group_path, class: 'bottom_button' %>
+</div>

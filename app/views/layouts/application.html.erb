@@ -9,10 +9,12 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
-  <body>
+   <body>
+     <% unless controller_name == "pages" %>
+       <%= render "layouts/navbar" %>
+     <%end%>
      <%= yield %>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
-  </body>
+    </body>
 </html>

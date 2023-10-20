@@ -1,0 +1,28 @@
+<div class="category_show_container category_show bg">
+<%= form_with(model: @expense, url: group_expenses_path(@group)) do |form| %>
+ 
+  <div class="category_data_container input_container">
+    <%= form.label :name, "Expense", class: 'reg_text_col'%>
+    <%= form.text_field :name, :required => true  %>
+  </div>
+
+  <div class="category_data_container input_container">
+    <%= form.label :amount, "Amount", class: 'reg_text_col'%>
+    <%= form.text_field :amount, :required => true, type: 'number', step: '0.1' %>
+  </div>
+
+ <div class="category_data_container input_container">
+  <%= form.label "Select Categories", class: 'reg_text_col'%>
+  <% @groups.each do |group| %>
+    <label class="reg_text_col">
+      <%= check_box_tag "expense[group_ids][]", group.id, @expense.groups.include?(group)%>
+      <%= group.name %>
+    </label>
+  <% end %>
+  </div>
+
+  <div class="bottom_button_container">
+    <%= form.submit "ADD NEW TRANSACTION", class: 'bottom_button' %>
+  </div>
+<% end %>
+</div>
