@@ -20,7 +20,7 @@ class ExpensesController < ApplicationController
         ExpenseGroup.create(expense: @expense, group: linked_groups)
       end
       flash[:success] = 'The Expense was added successfully.'
-      puts 'logrado'
+      redirect_to group_path(@groups[0])
     else
       flash[:error] = 'Error occurred.'
       redirect_to new_group_path

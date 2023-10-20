@@ -14,6 +14,8 @@ body {
 }
 
 .logo {
+  display: flex;
+  flex-shrink: 1;
   font-family: 'Great Vibes', cursive;
   font-weight: 400;
   font-size: 70px;
@@ -58,10 +60,11 @@ body {
   color: #fff;
   font-weight: 400;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between;  
 }
 
 .navbar_center {
+  margin-bottom: 50px;
   padding-top: 32px;
   padding-bottom: 18px;
   background-color: #3778c2;
@@ -106,13 +109,19 @@ body {
 input {
   border: none;
   outline: none;
+  background-color:#fff
+}
+
+.sign_up_button_container {
+  display: flex;
+  justify-content: center;
 }
 
 .sign_up_button {
-  background-color: #fff;
   text-decoration: none;
   padding: 8px 0;
-  color: #adabab;
+  color: rgb(89, 98, 106);
+  align-self: center;
 }
 
 .bottom_button_container {
@@ -122,9 +131,12 @@ input {
   left: 0;
   width: 100%;
   padding: 4% 0;
+  display: flex;
+  justify-content: center;
 }
 
 .bottom_button {
+  background-color: #5fb523;
   color: #fff;
   text-decoration: none;
   justify-content: center;
@@ -173,6 +185,7 @@ a {
   flex-direction: column;
   margin: 9px;
   background-color: #fff;
+  height: 100vh;
 }
 
 .category_show {
@@ -205,3 +218,11 @@ h3 {
   border-bottom: 1px solid #f5f3f3;
 }
 
+.bg {
+  background-color: #fff;
+}
+
+.input_container {
+  justify-content: flex-start;
+  gap: 15px;
+}

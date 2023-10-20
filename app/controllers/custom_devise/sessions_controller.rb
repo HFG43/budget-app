@@ -4,7 +4,8 @@ class CustomDevise::SessionsController < Devise::SessionsController
   end
 
   def new
-    @path_description = 'REGISTER'
+    @arrow_path = root_path
+    @path_description = 'SIGN IN'
     super
   end
 end
