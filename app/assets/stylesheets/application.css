@@ -10,7 +10,7 @@
 }
 
 body {
-  background-color: rgb(252, 251, 250);
+  background-color: rgb(249, 249, 249);
 }
 
 .logo {
@@ -42,10 +42,9 @@ body {
   border-radius: 6px;
 }
 
-
 .logo_container {
   text-align: center;
-  background-color: rgb(252, 251, 250);
+  background-color: rgb(249, 249, 249);
   height: 70vh;
   display: flex;
   align-items: center;
@@ -60,6 +59,21 @@ body {
   font-weight: 400;
   display: flex;
   justify-content: center;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+}
+
+.reg_text_col {
+  color: rgb(132, 132, 132);
+  font-weight: 700;
+}
+
+.reg_text_col_bold {
+  color: rgb(89, 98, 106);
+  font-weight: 900;
 }
 
 .register {
@@ -84,4 +98,52 @@ input {
   text-decoration: none;
   padding: 8px 0;
   color: #adabab;
+}
+
+.bottom_button_container {
+  background-color: #5fb523;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 4% 0;
+}
+
+.bottom_button {
+  color: #fff;
+  text-decoration: none;
+  justify-content: center;
+  padding: 12px;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  display: flex;
+  align-self: center;
+  margin: 0 3%;
+}
+
+.category_container {
+  margin: 10px;
+  background-color: #fff;
+  display: flex;
+}
+
+.icon_container {
+  margin: 8px;
+}
+
+.category_data_align {
+  width: 100%;
+}
+.category_data_container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 9px;
+  padding: 9px 0;
+  font-size: 0.8rem;
+  border-bottom: 1px solid #f5f3f3;
+}
+
+.category_data_date {
+  padding: 9px;
+  font-size: 0.7rem; 
 }
