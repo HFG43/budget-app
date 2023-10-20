@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@100;300;400;700;900&display=swap');
 
-
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +10,10 @@
 
 body {
   background-color: rgb(249, 249, 249);
+}
+
+a {
+  text-decoration: none;
 }
 
 .logo {
@@ -27,7 +30,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
 }
 
 .sign_section a {
@@ -60,7 +62,7 @@ body {
   color: #fff;
   font-weight: 400;
   display: flex;
-  justify-content: space-between;  
+  justify-content: space-between;
 }
 
 .navbar_center {
@@ -87,11 +89,13 @@ body {
 .reg_text_col {
   color: rgb(132, 132, 132);
   font-weight: 700;
+  text-decoration: none;
 }
 
 .reg_text_col_bold {
   color: rgb(89, 98, 106);
   font-weight: 900;
+  text-decoration: none;
 }
 
 .register {
@@ -109,7 +113,7 @@ body {
 input {
   border: none;
   outline: none;
-  background-color:#fff
+  background-color: #fff;
 }
 
 .sign_up_button_container {
@@ -154,10 +158,6 @@ input {
   display: flex;
 }
 
-a {
-  text-decoration: none;
-}
-
 .icon_container {
   margin: 8px;
 }
@@ -177,7 +177,7 @@ a {
 
 .category_data_date {
   padding: 9px;
-  font-size: 0.7rem; 
+  font-size: 0.7rem;
 }
 
 .category_show_container {
