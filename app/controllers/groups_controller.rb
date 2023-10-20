@@ -9,6 +9,7 @@ class GroupsController < ApplicationController
   end
 
   def show
+    @arrow_path = groups_path
     @path_description = 'TRANSACTIONS'
     @user = current_user
     @group = Group.find(params[:id])
@@ -17,11 +18,14 @@ class GroupsController < ApplicationController
   end
 
   def new
+    @path_description = 'NEW CATEGORY'
+    @arrow_path = groups_path
     @user = current_user
     @group = @user.groups.new
   end
 
   def create
+    @arrow_path = groups_path
     @group = current_user.groups.new(group_params)
 
     if @group.save

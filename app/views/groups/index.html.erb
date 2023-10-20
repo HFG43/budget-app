@@ -1,4 +1,5 @@
 <%@groups.each do |group|%>
+  <%=link_to group_path(group) do%>
   <div class="category_container"> 
     <div class="icon_container">
       <%= image_tag group.icon, class: 'icon' %>
@@ -16,6 +17,7 @@
     </div>
   </div>
   </div>
+<%end%>
 <%end%>
 
 <div class="bottom_button_container">

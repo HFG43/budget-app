@@ -6,6 +6,7 @@ class ExpensesController < ApplicationController
     @author = current_user
     @groups = current_user.groups
     @group = @groups.find(params[:group_id])
+    @arrow_path = group_path(@groups[0])
     @expense = Expense.new
   end
 

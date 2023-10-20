@@ -58,7 +58,22 @@ body {
   color: #fff;
   font-weight: 400;
   display: flex;
+  justify-content: space-between;
+}
+
+.navbar_center {
+  padding-top: 32px;
+  padding-bottom: 18px;
+  background-color: #3778c2;
+  color: #fff;
+  font-weight: 400;
+  display: flex;
   justify-content: center;
+}
+
+.arrow {
+  height: 18px;
+  margin: 0 12px;
 }
 
 .icon {
@@ -125,6 +140,10 @@ input {
   margin: 10px;
   background-color: #fff;
   display: flex;
+}
+
+a {
+  text-decoration: none;
 }
 
 .icon_container {

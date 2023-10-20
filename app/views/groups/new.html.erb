@@ -1,11 +1,9 @@
-<h1></h1>Add a new Catgory</h1>
-
 <%= form_with model: [@group], local:true do |form| %>
   <%= form.label :name, "Category"%>
-  <%= form.text_field :name, :required => true  %> <br><br>
+  <%= form.text_field :name, :required => true  %> 
   <%= form.label :icon, "Icon"%>
-  <%= form.url_field :icon, :required => true %><br><br>
-  <%= form.submit "Add new Category", class: "button" %>
+  <%= form.url_field :icon, :required => true %>
+<div class="bottom_button_container">
+  <%= form.submit "ADD NEW CATEGORY", class: 'bottom_button' %>
+</div>
 <% end %>
-
-<%= link_to "Back", groups_path %>
