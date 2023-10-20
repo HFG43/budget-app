@@ -26,11 +26,11 @@ class ExpensesController < ApplicationController
     end
   end
 
-  def index
-    @path_description = "TRANSACTIONS"
-    @category = Group.find(params[:group_id])
-    @expenses = ExpenseGroup.where(group_id: params[:group_id]).includes(:expenses).order(created_at: :desc)
-  end  
+  # def index
+  #   @path_description = "TRANSACTIONS"
+  #   @category = Group.find(params[:group_id])
+  #   @expenses = ExpenseGroup.where(group_id: params[:group_id]).includes(:expenses).order(created_at: :desc)
+  # end  
 
   private
 

@@ -1,5 +1,12 @@
+<% @expenses.each do |spend|%>
+ <% @group_amount += spend.amount%>
+<%end%>
+
 <%= @group.name%>
-<%@group.expenses.each do |expense|%>
+<%= @group_amount%>
+
+<% @expenses.each do |expense|%>
 <%= expense.name %>
-<%= expense.amount%>  
+<%= expense.created_at.strftime("%d %b %Y at %l%P")%>
+<%= expense.amount%>
 <%end%>

@@ -8,9 +8,11 @@ class GroupsController < ApplicationController
   end
 
   def show
-    @path_description = "DETAILS"
+    @path_description = "TRANSACTIONS"
     @user = current_user
     @group = Group.find(params[:id])
+    @expenses = @group.expenses.order(created_at: :desc)
+    @group_amount = 0
   end
 
   def new
