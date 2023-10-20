@@ -2,7 +2,7 @@ class ExpensesController < ApplicationController
   before_action :authenticate_user!
 
   def new
-    @path_description = 'TRANSACTION'
+    @path_description = 'NEW TRANSACTION'
     @author = current_user
     @groups = current_user.groups
     @group = @groups.find(params[:group_id])

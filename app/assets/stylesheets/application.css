@@ -42,7 +42,7 @@ a {
 
 .sign_section a:hover {
   color: #fff;
-  background-color: #3778c2;
+  background-color: #3878c2;
   border-radius: 6px;
 }
 
@@ -63,10 +63,12 @@ a {
   font-weight: 400;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .navbar_center {
   margin-bottom: 50px;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 18px;
   background-color: #3778c2;
@@ -76,26 +78,37 @@ a {
   justify-content: center;
 }
 
+.nav_sign_out {
+  color: #fff;
+  margin-right: 12px;
+}
+
+.nav_path {
+  font-size: 1.3rem;
+}
+
 .arrow {
   height: 18px;
-  margin: 0 12px;
+  margin-left: 12px;
 }
 
 .icon {
-  width: 50px;
-  height: 50px;
+  width: 75px;
+  height: 75px;
 }
 
 .reg_text_col {
   color: rgb(132, 132, 132);
   font-weight: 700;
   text-decoration: none;
+  font-size: 1rem;
 }
 
 .reg_text_col_bold {
   color: rgb(89, 98, 106);
   font-weight: 900;
   text-decoration: none;
+  font-size: 1rem;
 }
 
 .register {
@@ -106,7 +119,7 @@ a {
 }
 
 .lines {
-  padding: 12px 0;
+  padding: 22px 0;
   border-bottom: 1px solid #d8d4d4;
 }
 
@@ -123,9 +136,13 @@ input {
 
 .sign_up_button {
   text-decoration: none;
-  padding: 8px 0;
+  padding: 8px;
   color: rgb(89, 98, 106);
   align-self: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid rgb(134, 138, 141);
+  border-radius: 4px;
 }
 
 .bottom_button_container {
@@ -150,6 +167,7 @@ input {
   display: flex;
   align-self: center;
   margin: 0 3%;
+  width: 90%;
 }
 
 .category_container {
@@ -169,15 +187,15 @@ input {
 .category_data_container {
   display: flex;
   justify-content: space-between;
-  margin: 0 9px;
-  padding: 9px 0;
-  font-size: 0.8rem;
+  margin: 0 13px;
+  padding: 13px 0;
+  font-size: 0.9rem;
   border-bottom: 1px solid #f5f3f3;
 }
 
 .category_data_date {
   padding: 9px;
-  font-size: 0.7rem;
+  font-size: 0.85rem;
 }
 
 .category_show_container {
@@ -203,14 +221,14 @@ input {
 }
 
 h3 {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
 }
 
 .trans_header {
   align-items: center;
   justify-content: flex-start;
   gap: 9px;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .bottom_line {
