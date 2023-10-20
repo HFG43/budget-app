@@ -55,20 +55,25 @@ body {
 }
 
 .register {
-  color: #c4c0c0;
+  color: #8f8d8d;
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 0 3%;
 }
 
-.register_placeholder {
-  border: none;
-}
-
-.register_fields_container {
-  display: flex;
-  flex-direction: column;
+.lines {
+  padding: 12px 0;
+  border-bottom: 1px solid #d8d4d4;
 }
 
 input {
   border: none;
   outline: none;
-  background-color: rgb(252, 251, 250);
+}
+
+.sign_up_button {
+  background-color: #fff;
+  text-decoration: none;
+  padding: 8px 0;
+  color: #adabab;
 }
