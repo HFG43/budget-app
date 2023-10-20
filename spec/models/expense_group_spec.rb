@@ -3,28 +3,24 @@ require 'rails_helper'
 RSpec.describe Expense, type: :model do
   before do
     @user = User.create(id: 10, name: 'HFG', email: 'xxx@xxx.com', password: '123456password')
-    @group1 = Group.create(user: @user, name: 'My Expenses', icon: 'https://i.pravatar.cc/75?img=02%02')
-    @group2 = Group.create(user: @user, name: 'My New Expenses', icon: 'https://i.pravatar.cc/75?img=03%03') 
+    @group = Group.create(user: @user, name: 'My Expenses', icon: 'https://i.pravatar.cc/75?img=02%02')
     @expense = Expense.create(author: @user, name: 'Bike spend', amount: 100)
 end
 
-  describe 'validatios' do
-    it 'should include expense name' do
-      expect(@expense.name).to eq('Bike spend')
+describe 'validations' do
+    it 'should be valid with valid with expense and group attributes' do
+      expense_group = ExpenseGroup.new(expense: @expense, group: @group)
+      expect(expense_group).to be_valid
     end
 
-    it 'should no be valid if it doesnt include name' do
-      @expense.name = nil
-      expect(@expense).not_to be_valid
+    it 'should not be valid without an expense' do
+      expense_group = ExpenseGroup.new(group: @group)
+      expect(expense_group).not_to be_valid
     end
 
-    it 'should include a numeric amount' do
-      expect(@expense.amount).to eq(100)
-    end
-
-    it 'should no be valid if it doesnt include an amount' do
-      @expense.amount = nil
-      expect(@expense).not_to be_valid
+    it 'should not be valid without a group' do
+      expense_group = ExpenseGroup.new(expense: @expense)
+      expect(expense_group).not_to be_valid
     end
   end
 end      
