@@ -7,6 +7,12 @@ class GroupsController < ApplicationController
     @group_amount = 0
   end
 
+  def show
+    @path_description = "DETAILS"
+    @user = current_user
+    @group = Group.find(params[:id])
+  end
+
   def new
     @user = current_user
     @group = @user.groups.new
