@@ -1,3 +1,4 @@
+<div>
 <% @expenses.each do |spend|%>
  <% @group_amount += spend.amount%>
 <%end%>
@@ -10,3 +11,4 @@
 <%= expense.created_at.strftime("%d %b %Y at %l%P")%>
 <%= expense.amount%>
 <%end%>
+</div>
