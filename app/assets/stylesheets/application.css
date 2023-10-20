@@ -134,6 +134,7 @@ input {
 .category_data_align {
   width: 100%;
 }
+
 .category_data_container {
   display: flex;
   justify-content: space-between;
@@ -147,3 +148,41 @@ input {
   padding: 9px;
   font-size: 0.7rem; 
 }
+
+.category_show_container {
+  display: flex;
+  flex-direction: column;
+  margin: 9px;
+  background-color: #fff;
+}
+
+.category_show {
+  padding: 9px;
+}
+
+.disp_col {
+  display: flex;
+  flex-direction: column;
+}
+
+.transaction_disp {
+  display: flex;
+  justify-content: space-between;
+}
+
+h3 {
+  font-size: 0.75rem;
+}
+
+.trans_header {
+  align-items: center;
+  justify-content: flex-start;
+  gap: 9px;
+  font-size: 0.8rem;
+}
+
+.bottom_line {
+  padding-bottom: 9px;
+  border-bottom: 1px solid #f5f3f3;
+}
+

@@ -1,14 +1,33 @@
-<div>
-<% @expenses.each do |spend|%>
- <% @group_amount += spend.amount%>
-<%end%>
+<div class="category_show_container">
 
-<%= @group.name%>
-<%= @group_amount%>
+<div class="category_show">
+  <div class="transaction_disp trans_header reg_text_col">
+    <div class="icon_show_container">
+      <%= image_tag @group.icon, class: 'icon' %>
+    </div>
+    <%= @group.name%>
+  </div>
+  <% @expenses.each do |spend|%>
+    <% @group_amount += spend.amount%>
+  <%end%>
+  <div class="reg_text_col_bold transaction_disp bottom_line">
+    <h3>TOTAL AMOUNT</h3>
+    <%= @group_amount%>
+  </div>
+</div>
 
-<% @expenses.each do |expense|%>
-<%= expense.name %>
-<%= expense.created_at.strftime("%d %b %Y at %l%P")%>
-<%= expense.amount%>
-<%end%>
+  <% @expenses.each do |expense|%>
+    <div class="category_data_container disp_col">
+     <h3><p class="reg_text_col_bold"><%="TRANSACTION N° #{expense.id}"%></h3>
+      <div class="category_data_date reg_text_col transaction_disp">
+        <p><%= expense.created_at.strftime("%d %b %Y at %l%P")%></p>
+        <span class="reg_text_col_bold"><%= expense.amount%></span>
+      </div>
+    </div>
+  <%end%>
+
+</div>
+
+<div class="bottom_button_container">
+  <%= link_to "ADD NEW TRANSACTION", new_group_expense_path(@group), class: 'bottom_button' %>
 </div>
