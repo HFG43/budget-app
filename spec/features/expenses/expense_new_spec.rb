@@ -16,5 +16,5 @@ describe "Visit the new page of 'expenses'", type: :feature do
     visit new_group_expense_path(@group)
     expect(page).to have_css('.category_data_container')
     expect(page).to have_content 'Select categories'
-  end 
-end  
+  end
+end

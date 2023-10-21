@@ -4,7 +4,7 @@ describe "Visit the show page of 'groups'", type: :feature do
   before do
     user = FactoryBot.create(:user)
     @group = FactoryBot.create(:group, user:)
-    expense = FactoryBot.create(:expense, author: user)
+    FactoryBot.create(:expense, author: user)
     login_as(user)
   end
 
@@ -28,5 +28,5 @@ describe "Visit the show page of 'groups'", type: :feature do
     visit group_path(@group)
     expect(page).to have_content 'TRANSACTION'
     expect(page).to have_content 'TOTAL AMOUNT'
-  end 
-end  
+  end
+end

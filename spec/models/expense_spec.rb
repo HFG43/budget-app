@@ -4,7 +4,7 @@ RSpec.describe Expense, type: :model do
   before do
     @user = User.create(id: 10, name: 'HFG', email: 'xxx@xxx.com', password: '123456password')
     @expense = Expense.create(author: @user, name: 'Bike spend', amount: 100)
-end
+  end
 
   describe 'validatios' do
     it 'should include expense name' do
@@ -25,4 +25,4 @@ end
       expect(@expense).not_to be_valid
     end
   end
-end      
+end

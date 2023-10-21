@@ -27,11 +27,11 @@ describe "Visit the index page of 'groups'", type: :feature do
     visit groups_path
     expect(page).to have_css('.category_container')
     expect(page).to have_content 'Bike Spends'
-  end 
+  end
 
   it 'should redirect to group show after clicking on the a category' do
     visit groups_path
     click_link 'Bike Spends'
     expect(page).to have_current_path(group_path(@group))
   end
-end  
+end
