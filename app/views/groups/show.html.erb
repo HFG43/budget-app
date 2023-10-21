@@ -18,7 +18,7 @@
 
   <% @expenses.each do |expense|%>
     <div class="category_data_container disp_col">
-     <h3><p class="reg_text_col_bold"><%="TRANSACTION N° #{expense.id}"%></h3>
+     <h3><p class="reg_text_col_bold"><%="#{expense.name} N° #{expense.id}"%></h3>
       <div class="category_data_date reg_text_col transaction_disp">
         <p><%= expense.created_at.strftime("%d %b %Y at %l%P")%></p>
         <span class="reg_text_col_bold"><%= expense.amount%></span>
