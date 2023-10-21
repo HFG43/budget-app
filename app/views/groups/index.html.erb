@@ -11,7 +11,7 @@
       <% group.expenses.each do |spend|%>
         <%@group_amount += spend.amount%>
       <%end%>
-    <p class="reg_text_col_bold"><%=@group_amount%></p>  
+    <p class="reg_text_col_bold"><%= number_to_currency(@group_amount, unit: "$", precision: 2)%></p>  
     </div>
     <div class="category_data_date reg_text_col">
       <%=group.created_at.strftime("%d %b %Y")%>

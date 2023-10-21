@@ -12,7 +12,7 @@
   <%end%>
   <div class="reg_text_col_bold transaction_disp bottom_line">
     <h3>TOTAL AMOUNT</h3>
-    <%= @group_amount%>
+    <%= number_to_currency(@group_amount, unit: "$", precision: 2)%>
   </div>
 </div>
 
@@ -21,7 +21,7 @@
      <h3><p class="reg_text_col_bold"><%="#{expense.name} N° #{expense.id}"%></h3>
       <div class="category_data_date reg_text_col transaction_disp">
         <p><%= expense.created_at.strftime("%d %b %Y at %l%P")%></p>
-        <span class="reg_text_col_bold"><%= expense.amount%></span>
+        <span class="reg_text_col_bold"><%= number_to_currency(expense.amount, unit: "$", precision: 2)%></span>
       </div>
     </div>
   <%end%>
