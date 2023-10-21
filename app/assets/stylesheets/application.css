@@ -32,7 +32,7 @@ a {
   justify-content: space-between;
 }
 
-.sign_section a {
+.sign_up {
   color: #8f8d8d;
   text-decoration: none;
   font-size: 1.7rem;
@@ -40,10 +40,14 @@ a {
   text-align: center;
 }
 
-.sign_section a:hover {
+.log_in {
   color: #fff;
   background-color: #3878c2;
   border-radius: 6px;
+  text-decoration: none;
+  font-size: 1.7rem;
+  padding: 12px 0;
+  text-align: center;
 }
 
 .logo_container {
