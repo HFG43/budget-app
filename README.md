@@ -39,7 +39,7 @@
 
 [You can see a live demo here] (https://budget-app-eb8d.onrender.com)
 
-Please find below a video with a guide-through my project: ()
+Please find below a video with a guide-through my project: (https://www.loom.com/share/a7aba17b739e4a6fa534d23414213031?sid=d05521c1-2a9f-43db-bc0e-4b0a40392edd)
 
 ## 🛠 Built With <a name="built-with"></a>
 
