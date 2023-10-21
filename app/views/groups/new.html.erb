@@ -1,0 +1,15 @@
+<div class="category_show_container category_show bg">
+<%= form_with model: [@group], local:true do |form| %>
+  <div class="category_data_container input_container">
+    <%= form.label :name, "Category", class: 'reg_text_col'%>
+    <%= form.text_field :name, :required => true  %> 
+  </div>
+  <div class="category_data_container input_container">
+    <%= form.label :icon, "Icon", class: 'reg_text_col'%>
+    <%= form.url_field :icon, :required => true %>
+  </div>
+  <div class="bottom_button_container">
+    <%= form.submit "ADD NEW CATEGORY", class: 'bottom_button' %>
+  </div>
+<% end %>
+</div>
