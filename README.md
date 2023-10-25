@@ -35,7 +35,7 @@
 # Smart Spend <a name="about-project"></a>
 
 
-**Smart Spend** is an aplication made with Ruby on Rails where you are able to manage your spends. You are able to create spend categories, and transactions associated to each category. Yo are also able to see how much money you spend in each category.
+**Smart Spend** is an application made with Ruby on Rails where you are able to manage your spending. You are able to create spend categories and transactions associated with each category. You are also able to see how much money you spend in each category.
 
 [You can see a live demo here] (https://budget-app-eb8d.onrender.com)
 
