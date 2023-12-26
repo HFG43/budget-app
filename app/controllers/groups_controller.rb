@@ -2,7 +2,7 @@ class GroupsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @path_description = 'CATEGORIES'
+    @path_description = 'MY CATEGORIES'
     @user = current_user
     @groups = @user.groups
     @group_amount = 0
