@@ -79,12 +79,16 @@ a {
   color: #fff;
   font-weight: 400;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .nav_sign_out {
   color: #fff;
   margin-right: 12px;
+}
+
+.nav_sign_out_hide {
+  color: #3778c2;
 }
 
 .nav_path {
@@ -94,6 +98,7 @@ a {
 .arrow {
   height: 18px;
   margin-left: 12px;
+  margin-right: 18px;
 }
 
 .icon {
